@@ -1,0 +1,14 @@
+{
+  "name": "arsvine-realm-docs",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.7.0",
+  "scripts": {
+    "dev": "rspress dev",
+    "build": "rspress build",
+    "preview": "rspress preview"
+  },
+  "dependencies": {
+    "rspress": "^1.47.0"
+  }
+}
