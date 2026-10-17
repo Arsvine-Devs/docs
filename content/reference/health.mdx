@@ -1,0 +1,18 @@
+---
+title: Health
+description: Live and ready payload.
+---
+
+Success bodies use `@arsvine/service-health`:
+
+```json
+{ "status": "live", "service": "docs" }
+{ "status": "ready", "service": "docs" }
+```
+
+Paths:
+
+- Realm: `/api/health/live` and `/api/health/ready`
+- Other services, including this site: `/health/live` and `/health/ready`
+
+`not_ready` is a failure body and may return 503. Realm's public health URL can return 429 because of bot protection; do not use that URL as the only Status probe.

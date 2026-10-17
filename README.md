@@ -1,25 +1,26 @@
-# ARSVINE REALM Documentation
+# Arsvine 文档站
 
-Documentation site for [ARSVINE REALM](https://github.com/ArsvineZhu/arsvine-realm) — a post-apocalyptic HUD-themed portfolio & blog site built with Next.js 16.
+Arsvine 站点体系的文档应用，目标域名 `https://docs.arsvine.com`。
 
-Built with [Rspress](https://rspress.rs/), a React-based static site generator powered by Rspack.
+English: documentation site for visitors, agents, and authorized maintainers. It replaces the old Rspress guide.
 
-## Contents
+| 读者 | 路径 |
+| --- | --- |
+| 访客 | `/guide` |
+| Agent / 契约 | `/reference`、`/llms.txt` |
+| 维护者 | `/internal`（Auth owner） |
 
-- [Architecture](/guide/architecture) — Router structure, content sources, protected-post flow, API routes, transitions, styling, and 3D effects.
-- [Development Guide](/guide/development) — Local setup, commands, scripts, COS Referer workflow, fonts, images, music, and daily maintenance.
-- [Operations Guide](/guide/operations) — Deployment, environment variables, analytics, CDN/COS operations, ISR, Upstash, SEO files, and operational checks.
-- [Gotchas](/guide/gotchas) — Historical bugs and fragile conventions.
+## 本地
 
-## Usage
+Node 24，pnpm 12.14。
 
 ```bash
 pnpm install
-pnpm dev      # Start dev server at http://localhost:3000
-pnpm build    # Build static site to doc_build/
-pnpm preview  # Preview production build locally
+pnpm dev
+pnpm test
+pnpm build
 ```
 
-## License
+内部文档在未配置 `DOCS_OIDC_CLIENT_ID`、`DOCS_OIDC_CLIENT_SECRET`、`DOCS_SESSION_SECRET` 时只显示未开放说明，不输出正文。
 
-- Source code: [MIT](./LICENSE)
+本仓库默认分支 `master`。开发用 `dev/<topic>`。绑定域名和部署需要单独授权。

@@ -1,0 +1,12 @@
+---
+title: Auth names
+description: OIDC resources and scopes.
+---
+
+Auth issuer is `https://auth.arsvine.com`.
+
+Console OIDC resource is the API origin. Scopes include `openid`, `profile`, `email`, `content:read`, `content:write`, `content:publish`, and asset/integration/job scopes.
+
+Protected post reads use client credentials with scope `content:protected:read` and resource `https://content.arsvine.com`.
+
+This docs site uses its own resource `https://docs.arsvine.com` and scope `openid profile email`. Internal pages accept role `owner` only.

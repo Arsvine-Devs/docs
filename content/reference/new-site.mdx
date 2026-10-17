@@ -1,0 +1,14 @@
+---
+title: New site
+description: Minimum checklist, using this docs site as the example.
+---
+
+1. Create a new Vercel project. Do not reuse Realm, Ripple, or Afterimage.
+2. Add the origin and health paths to `@arsvine/site-config`, then sync consumer copies.
+3. Expose `/health/live` and `/health/ready` through `@arsvine/service-health`.
+4. Keep secrets in env. Do not put fixed origins in dotenv.
+5. Skip Core and Content write scopes when the site is read-only.
+6. Register a dedicated OIDC client when a section needs login. Do not reuse the API audience.
+7. Put media under a new CDN prefix. This docs site publishes none.
+8. Add a Status monitor that is not blocked by bot protection.
+9. Leave only `README.md` and `AGENTS.md` as the repo entry; long system prose stays here.
